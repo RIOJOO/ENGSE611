@@ -3,7 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> แนะนำตัว  </title>
+    <title> แนะนำตัว </title>
+    
+    <style>
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        body {
+            background-color: #333;
+            color: #2b00ec;
+            font-family: sans-serif; 
+            margin: 8px;
+            padding: 0;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        thead {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     
@@ -14,11 +42,11 @@
     
     <nav>
         <p> MENU</p>
-    <ul>
-        <li><a href="#about"> หน้าแรก </a></li>
-        <li><a href="skills"> เกี่ยวกับผม </a></li>
-        <li><a href="contact"> ติดต่อฉัน </a></li>
-    </ul>
+        <ul>
+            <li><a href="#about"> หน้าแรก </a></li>
+            <li><a href="#skills-list"> ทักษะ </a></li> 
+            <li><a href="#contact-me"> ติดต่อฉัน </a></li> 
+        </ul>
     </nav>
 
     <main>
@@ -26,31 +54,23 @@
             <h2> เกี่ยวกับผม </h2>
             <p> ผมชื่อสุรบดินทร์ ปัญญาเหล็ก เป็นนักศึกษาที่มีความสนใจในการเขียนโปรแกรม และ งาน IT รูปแบบต่างๆ </p>
             
-            <H2> แรงบันดาลใจ </H2>
-            <p>  แรงบันดาลใจของผมมาจาก ความคุ้นชินใน Computer และอุปกรณ์ IT หลายๆอย่างตั้งแต่เด็ก
+            <img src="AFYN3402.JPG" alt="My picture" width="300" height="400" class="center-image">
+            
+            <h2> แรงบันดาลใจ </h2>
+            <p> แรงบันดาลใจของผมมาจาก ความคุ้นชินใน Computer และอุปกรณ์ IT หลายๆอย่างตั้งแต่เด็ก
                 ทำให้อยากเข้ามาเรียนในด้านนี้</p>
-
-            <img src="AFYN3402.JPG" alt="My picture" width="300" height="400" class=" center-image">
         </section>
 
-        <section id="skills">
-            <h2> ทักษะของฉัน </h2>
+        <section id="skills-list">
+            <h2> ทักษะของผม </h2>
             <ul>
                 <li> การเขียน HTML , C++ </li>
                 <li> การพัฒนาเว็บแอปพลิเคชันด้วย JavaScript </li>
                 <li> การใช้ฐานข้อมูลเบื้องต้น </li>
             </ul>
         </section>
-
-        <section id="contact">
-            <h2> ติดต่อฉัน </h2>
-            <p> คุณสามารถติดต่อฉันได้ทางอีเมล: Surabordin2549@gmail.com
-            <p> ติดต่อผ่าน Facebook: Surabordin Panyalek
-            <p> ต่อต่อผ่าน Instagram : 28_ferdinand_
-            <p> ติดต่อผ่าน Line : riopvpthehero
-            <p> เบอร์โทรศัพท์: 095-159-5087
         
-        <section id="skills">
+        <section id="skills-table">
             <h2> ตารางทักษะ</h2>
 
             <table>
@@ -64,27 +84,34 @@
                 <tbody>
                     <tr>
                         <td> การเขียนโปรแกรม </td>
-                        <td> HTML5, C++3 </td>
-                        <td> เบื้องต้น </td>
+                        <td> HTML5, C++ </td> <td> เบื้องต้น </td>
                     </tr>
                     <tr>
-                        <td rowspan="2">ซอฟต์แวร์</td> <td>Microsoft Office</td>
+                        <td rowspan="2">ซอฟต์แวร์</td> 
+                        <td>Microsoft Office</td>
                         <td>ดี</td>
                     </tr>
-                    </tr>
-                        <td>โปรแกรมตัดต่อคลิป</td>
+                    <tr> 
+                        <td>โปรแกรมตัดต่อคลิป</td> 
                         <td>ดีมาก</td>
                     </tr>
                     <tr>
-                        <td colspan="3"> หมายเหตุ: กำลังพัฒนาทักษะ JavaScript และ Python อยู่</td> </tr>
+                        <td colspan="3"> หมายเหตุ: กำลังพัฒนาทักษะ JavaScript และ Python อยู่</td> 
+                    </tr>
                 </tbody>
             </table>
         </section>
-            
-        <section id="contact">
-            <h2> ติดต่อผม</h2>
 
-            <from action="#" metho="POST">
+        <section id="contact-me">
+            <h2> ติดต่อผม </h2>
+            <p> คุณสามารถติดต่อฉันได้ทางอีเมล: Surabordin2549@gmail.com</p>
+            <p> ติดต่อผ่าน Facebook: Surabordin Panyalek</p>
+            <p> ติดต่อผ่าน Instagram : 28_ferdinand_</p>
+            <p> ติดต่อผ่าน Line : riopvpthehero</p>
+            <p> เบอร์โทรศัพท์: 095-159-5087</p>
+
+            <h3> แบบฟอร์มติดต่อผม</h3>
+            <form action="#" method="POST">
                 <label for="name"> ชื่อ: </label>
                 <input type="text" id="name" name="name" required> <br><br>
 
@@ -95,17 +122,14 @@
                 <textarea id="message" name="message" rows="4" cols="50" required></textarea> <br><br>
 
                 <input type="submit" value="ส่งข้อความ">
-            </from>
+            </form>
         </section>
 
-        <section>
+        <section id="social-media">
             <h2> โซเชียลมีเดีย</h2>
             <p>
                 ติดตามผมได้ที่:
-                <a href=" https://www.facebook.com/surabordin.panyalek " target="_black">Facebook</a>
-                <a href=" https://www.instagram.com/28_ferdinand_/ " target="_black">Instagram</a>
-                <a href=" https://github.com/RIOJOO" target="_black">GitHub</a>
-            </p>
+                <a href=" https://www.facebook.com/surabordin.panyalek " target="_blank">Facebook</a> <a href=" https://www.instagram.com/28_ferdinand_/ " target="_blank">Instagram</a> <a href=" https://github.com/RIOJOO" target="_blank">GitHub</a> </p>
         </section>
 
     </main>
@@ -114,24 +138,5 @@
         <p>&copy; 2025 สุรบดินทร์ ปัญญาเหล็ก. เว็บไซต์แนะนำตัวเอง</p>
     </footer>
 
-    <ul>
-
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บไซต์แนะนำตัวเองของฉัน</title>
-
-    <style>
-        .center-image {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        body {
-            background-color: #ffffff;
-            color: #000000;
-        }
-    </style>
-    </head>
-</body>
+    </body>
 </html>
