@@ -3,252 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Lab 1: Sign-Up Form Basic</title>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background-color: #fff;
-            padding: 20px 30px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            position: relative; 
-            max-width: 500px; 
-            width: 90%; 
-            border: 1px solid #ccc;
-        }
-        
-        .close-btn, .subtitle-left {
-            display: none; 
-        }
-
-        .subtitle-left {
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            font-size: 14px;
-            color: #666;
-            font-weight: normal;;
-            padding: 0;
-            margin: 0;
-            line-height: 1.5;
-        }
-
-
-        h2 {
-            text-align: center;
-            color: #333;
-            font-size: 20px;
-            margin-top: 10px; 
-            margin-bottom: 25px;
-        }
-        
-        .form-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .form-table td {
-            padding: 5px 0; 
-            vertical-align: top;
-        }
-
-        .form-table label {
-            font-weight: bold;
-            display: block; 
-            font-size: 13px; 
-        }
-
-        .form-table input[type="text"],
-        .form-table input[type="password"],
-        .form-table input[type="email"],
-        .form-table select {
-            width: 100%;
-            padding: 6px;
-            margin-top: 3px;
-            box-sizing: border-box;
-            border: 1px solid #999;
-            border-radius: 2px; 
-            font-size: 13px;
-        }
-        
-        .input-inline {
-            display: flex;
-            gap: 10px;
-        }
-        .input-inline input {
-            width: 50%; 
-        }
-        .input-inline label {
-            display: none;
-        }
-
-        .required {
-            color: red;
-        }
-
-        .radio-group label {
-            display: inline-block;
-            font-weight: normal;
-            margin-right: 15px;
-        }
-        
-        .dob-group {
-            display: flex; 
-            gap: 5px;
-        }
-        .dob-group select {
-            width: 33.33%;
-        }
-
-        .terms-box {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-top: 15px;
-            font-size: 11px;
-            color: #555;
-            text-align: left;
-        }
-
-        .button-group {
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 10px;
-        }
-
-        .button-group button {
-            padding: 8px 15px;
-            margin: 0 5px;
-            border: 1px solid #777;
-            border-radius: 2px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .button-group #submit-btn {
-            background-color: #eee;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .button-group #reset-btn {
-            display: none;
-        }
-
-    </style>
+    <title>Exam Lab 1: Sign-Up Form Basic (No CSS, Full Border)</title>
 </head>
 <body>
-    <div class="container">
-        <button class="close-btn" onclick="this.closest('.container').style.display='none';">&times;</button>
-        <span class="subtitle-left">ง่ายและเร็ว</span>
-        
-        <h2>สมัครสมาชิก</h2>
-
-        <form action="#" method="post">
-            <div class="form-body">
-                <table class="form-table">
-                    <tr>
-                        <td colspan="2">
-                            <label for="firstname">ชื่อ - นามสกุล:</label>
-                            <div class="input-inline">
-                                <input type="text" id="firstname" name="firstname" placeholder="ชื่อ" required>
-                                <input type="text" id="lastname" name="lastname" placeholder="นามสกุล" required>
-                            </div>
-                        </td>
-                    </tr>
+    
+    <center>
+        <table border="1" cellpadding="15" cellspacing="0" width="450">
+            <tr>
+                <td align="center">
                     
-                    <tr>
-                        <td colspan="2">
-                            <label for="email">อีเมล:</label>
-                            <input type="email" id="email" name="email" required>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td colspan="2">
-                            <label>รหัสผ่าน:</label>
-                             <div class="input-inline">
-                                <input type="password" id="password" name="password" placeholder="รหัสผ่าน" required>
-                                <input type="password" id="confirm_password" name="confirm_password" placeholder="ยืนยันรหัสผ่าน" required>
-                            </div>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td colspan="2">
-                            <label>วัน/เดือน/ปีเกิด:</label>
-                            <div class="dob-group">
-                                <select name="dob_day" required>
-                                    <option value="">1</option>
-                                    <script>
-                                        for (let i = 1; i <= 31; i++) {
-                                            document.write(`<option value="${i}">${i}</option>`);
-                                        }
-                                    </script>
-                                </select>
+                    <h2 align="left">สมัคร</h2>
+                    <p align="left">ง่ายและเร็ว</p>
+                    <form action="#" method="post">
+                        <div class="form-body">
+                            <table border="0" cellpadding="8" cellspacing="0" width="100%">
                                 
-                                <select name="dob_month" required>
-                                    <option value=""> - </option>
-                                    <option value="1">ม.ค.</option>
-                                    <option value="2">ก.พ.</option>
-                                    <option value="3">มี.ค.</option>
-                                    <option value="4">เม.ย.</option>
-                                    <option value="5">พ.ค.</option>
-                                    <option value="6">มิ.ย.</option>
-                                    <option value="7">ก.ค.</option>
-                                    <option value="8">ส.ค.</option>
-                                    <option value="9">ก.ย.</option>
-                                    <option value="10">ต.ค.</option>
-                                    <option value="11">พ.ย.</option>
-                                    <option value="12">ธ.ค.</option>
-                                </select>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="full_name">ชื่อ - นามสกุล:</label><br>
+                                        <input type="text" id="firstname" name="firstname" placeholder="ชื่อ" required size="20">
+                                        <input type="text" id="lastname" name="lastname" placeholder="นามสกุล" required size="20">
+                                    </td>
+                                </tr>
                                 
-                                <select name="dob_year" required>
-                                    <option value=""> - </option>
-                                    <script>
-                                        const currentYear = new Date().getFullYear();
-                                        for (let i = currentYear; i >= currentYear - 100; i--) {
-                                            document.write(`<option value="${i}">${i}</option>`);
-                                        }
-                                    </script>
-                                </select>
-                            </div>
-                        </td>
-                    </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="email">อีเมล:</label><br>
+                                        <input type="email" id="email" name="email" required size="48">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="2">
+                                        <label>รหัสผ่าน:</label><br>
+                                        <input type="password" id="password" name="password" placeholder="รหัสผ่าน" required size="20">
+                                        <input type="password" id="confirm_password" name="confirm_password" placeholder="ยืนยันรหัสผ่าน" required size="20">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="2">
+                                    <label> วัน/เดือน/ปีเกิด</label><br>
+                                    
+                                    <select name="dob_day" required>
+                                            <option value="">1</option>
+                                            <script>
+                                                for (let i = 1; i <= 31; i++) {
+                                                    document.write(`<option value="${i}">${i}</option>`);
+                                                }
+                                            </script>
+                                        </select>
 
-                    <tr>
-                        <td colspan="2">
-                            <label>เพศ:</label>
-                            <div class="radio-group">
-                                <input type="radio" id="gender_male" name="gender" value="male" required>
-                                <label for="gender_male">ชาย</label>
+                                        <select name="dob_month" required>
+                                            <option value="9">ก.ย.</option>
+                                            <option value="1">ม.ค.</option>
+                                            <option value="2">ก.พ.</option>
+                                            <option value="3">มี.ค.</option>
+                                            <option value="4">เม.ย.</option>
+                                            <option value="5">พ.ค.</option>
+                                            <option value="6">มิ.ย.</option>
+                                            <option value="7">ก.ค.</option>
+                                            <option value="8">ส.ค.</option>
+                                            <option value="9">ก.ย.</option>
+                                            <option value="10">ต.ค.</option>
+                                            <option value="11">พ.ย.</option>
+                                            <option value="12">ธ.ค.</option>
+                                        </select>
 
-                                <input type="radio" id="gender_female" name="gender" value="female">
-                                <label for="gender_female">หญิง</label>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            
-            <div class="terms-box">
-                เมื่อคลิก 'สมัคร' คุณยอมรับข้อกำหนดและเงื่อนไขของเว็บไซต์ และยินยอมให้เราส่งอีเมลเกี่ยวกับสินค้าและบริการได้ และคุณได้อ่านนโยบายความเป็นส่วนตัวของเราแล้ว
-            </div>
+                                        <select name="dob_year" required>
+                                            <option value="2000">2000</option>
+                                            <script>
+                                                const currentYear = new Date().getFullYear();
+                                                for (let i = currentYear; i >= currentYear - 100; i--) {
+                                                    document.write(`<option value="${i}">${i}</option>`);
+                                                }
+                                            </script>
+                                        </select>
+                                    </td>
+                                </tr>
 
-            <div class="button-group">
-                <button type="submit" id="submit-btn">สมัคร</button>
-                <button type="reset" id="reset-btn">ยกเลิก (Reset)</button> 
-            </div>
-        </form>
-    </div>
+                                <tr>
+                                    <td colspan="2">
+                                        <label>เพศ:</label>
+                                        <input type="radio" id="gender_male" name="gender" value="male" required>
+                                        <label for="gender_male">ชาย</label>
+
+                                        <input type="radio" id="gender_female" name="gender" value="female">
+                                        <label for="gender_female">หญิง</label>
+                                    </td>
+                                </tr>
+
+                                </table>
+
+                                <div class="terms-box">
+                                    เมื่อคลิก 'สมัคร' แสดงว่าคุณยอมรับข้อกำหนด นโยบายข้อมูล และนโยบายคุ้กกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเรา และสามารถเลือกไม่รับได้ในภายหลัง
+                                </div>
+                            </table>
+                        </div>
+                        
+                        <br>
+                        <div align="center">
+                            <button type="submit" id="submit-btn">สมัคร</button>
+                            <button type="reset" id="reset-btn">ยกเลิก (Reset)</button> 
+                        </div>
+                    
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </center>
 </body>
 </html>
