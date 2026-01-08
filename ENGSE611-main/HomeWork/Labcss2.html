@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labcss2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* คอลัมน์ซ้ายมีขนาด 25% คอลัมน์ขวามีขนาด 75% /*/
+        .grid-container {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            min-height: 400px;
+        }
+        
+        /* คอลัมน์ซ้ายให้พื้นหลังมีสีฟ้า และตัวหนังสือสีขาว /*/
+        .menu {
+            background-color: #3b82f6;
+            color: white;
+            padding: 20px;
+        }
+        
+        /* คอลัมน์ขวาใส่สีน้ำตาลครีม /*/
+        .content {
+            background-color: #c09864;
+            padding: 20px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .menu li {
+            margin-bottom: 10px;
+        }
+
+            /* Main! ถ้าหน้าจอกว้างน้อยกว่า 600 ให้รวมเป็นอันเดียวกัน /*/
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>โจทย์ที่ 2: 2-Column Layout ด้วย CSS Grid</h2>
+
+    <div class="grid-container">
+        <div class="menu">
+            <h3>เมนู</h3>
+            <ul>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h3>ยินดีต้อนรับ</h3>
+            <p>นี่คือเนื้อหาหลักของเว็บไซต์</p>
+            <p>ลองทดสอบย่อ-ขยายหน้าจอเพื่อดู Responsive Layout</p>
+        </div>
+    </div>
+
+</body>
+</html>
