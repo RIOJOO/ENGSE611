@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array for loop</title>
+</head>
+<body>
+
+    <pre id="output"></pre>
+
+    <script>
+        let out = "";
+
+        // Fruits
+        let fruits = ["Apple", "Banana", "Orange", "Grape", "Lemon"];
+        out += "List of fruits\n";
+        
+        for (let i = 0; i < fruits.length; i++) {
+            out += `${i + 1}. ${fruits[i]}\n`;
+        }
+
+        out += "\nList of programming languages (reversed)\n";
+
+        // Languages (reverse order)
+        let languages = ["GO", "JavaScript", "PHP", "Python", "Ruby"];
+        let count = 1;
+
+        for (let i = languages.length - 1; i >= 0; i--) {
+            out += `${count}. ${languages[i]}\n`;
+            count++;
+        }
+
+        // แสดงผลบนหน้าเว็บ
+        document.getElementById("output").textContent = out;
+    </script>
+</body>
+</html>
