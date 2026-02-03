@@ -1,0 +1,42 @@
+<pre id="output" style="background: #222; color: rgb(238, 238, 238); padding: 10px;"></pre>
+
+<button onclick="runDemo()">Run Code</button>
+
+<script>
+    function runDemo() {
+        console.clear();
+        const output = [];
+
+        let a = 10; let b = 3;
+
+        output.push("a + b = " + (a + b));
+        console.log("a + b =", (a + b));
+
+        output.push("a % b = " + (a % b));
+        console.log("a % b =", (a % b));
+
+        output.push("a ** b = " + (a ** b));
+        console.log("a ** b =", (a ** b));
+
+        output.push("ปัดเศษ 3.7 = " + Math.round(3.7));
+        console.log("ปัดเศษ 3.7 =", Math.round(3.7));
+
+        output.push("ปัดลง 3.7 = " + Math.floor(3.7));
+        console.log("ปัดลง 3.7 =", Math.floor(3.7));
+
+        output.push("ปัดขึ้น 3.2 = " + Math.ceil(3.2));
+        console.log("ปัดขึ้น 3.2 =", Math.ceil(3.2));
+
+        // ประกาศตัวแปร rand และ dice ก่อนนำไปใช้
+        let rand = Math.random();
+        output.push("สุ่ม 0-1: " + rand);
+        console.log("สุ่ม 0-1:", rand);
+
+        let dice = Math.floor(Math.random() * 6) + 1; // สุ่ม 1-6
+        output.push("ทอยลูกเต๋าได้: " + dice);
+        console.log("ทอยลูกเต๋าได้:", dice);
+
+        // นำข้อมูลแสดงบนหน้าเว็บ
+        document.getElementById("output").textContent = output.join("\n");
+    }
+</script>
