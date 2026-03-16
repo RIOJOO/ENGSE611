@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valoran Grade Evaluator</title>
+    <style>
+:root {
+    --v-red: #ff4655;
+    --v-dark: #0f1923;
+    --v-white: #ece8e1;
+}
+
+body {
+    margin: 0;
+    background-color: var(--v-dark);
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--v-white);
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 0);
+    background-size: 30px 30px;
+}
+
+.v-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.v-card {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+}
+
+.v-title {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    color: #8b978f;
+    margin-bottom: 30px;
+}
+
+.input-container input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    color: white;
+    font-size: 4rem;
+    font-weight: 900;
+    width: 150px;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-container input:focus {
+    border-bottom-color: var(--v-red);
+}
+
+.v-btn {
+    margin-top: 30px;
+    background: transparent;
+    border: 1px solid var(--v-red);
+    color: var(--v-red);
+    padding: 10px 40px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+}
+
+.v-btn:hover {
+    background: var(--v-red);
+    color: white;
+}
+
+/* เกรดตัวใหญ่ */
+.grade-display {
+    font-size: 12rem; /* ใหญ่สะใจ */
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 20px;
+    animation: gradeIn 0.5s ease-out;
+}
+.v-card {
+    position: relative;
+    border: 1px solid rgba(223, 209, 209, 0.1); /* เส้นขอบบางๆ */
+    background: rgba(15, 25, 35, 0.8);
+    padding: 60px;
+    clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+}
+
+.v-card::before {
+    content: "SYSTEM_ACCESS_01";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 10px;
+    color: var(--v-red);
+    letter-spacing: 2px;
+}
+
+@keyframes gradeIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+    </style>
+</head>
+<body>
+<body>
+    <div class="v-screen">
+        <div class="v-card">
+            <h1 class="v-title">RANK EVALUATOR</h1>
+            
+            <div class="input-container">
+                <input type="number" id="scoreInput" placeholder="00" min="0" max="100">
+            </div>
+
+            <button class="v-btn" onclick="checkGrade()">EVALUATE</button>
+
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <script src="JavaScript/JavaScript.js"></script>
+</body>
+

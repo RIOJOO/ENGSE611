@@ -1,0 +1,61 @@
+/* จัดการ Layout หลัก */
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* ให้การ์ดลงมาบรรทัดใหม่ได้ถ้าหน้าจอเล็ก */
+    justify-content: center; /* จัดกึ่งกลาง */
+    gap: 25px; /* ระยะห่างระหว่างการ์ด */
+    padding: 40px 20px;
+    background-color: #f4f7f6;
+}
+
+/* สไตล์ของการ์ดแต่ละใบ */
+.card {
+    background: #ffffff;
+    width: 280px; /* ความกว้างที่พอดีสำหรับ 4 ใบในหน้าจอมาตรฐาน */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* เงาฟุ้งๆ แบบในรูป LoL */
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+/* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ (Hover) */
+.card:hover {
+    transform: translateY(-10px); /* ยกตัวขึ้น */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* เงาเข้มขึ้น */
+}
+
+/* รูปภาพด้านบนการ์ด */
+.card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover; /* ให้รูปเต็มกรอบสวยงาม */
+    background-color: #2c3e50; /* สีสำรองถ้าโหลดรูปไม่ขึ้น */
+}
+
+/* เนื้อหาข้างใน */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #b38b4d; /* สีทองๆ คล้ายๆ เว็บ LoL */
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ปรับหัวข้อใหญ่ */
+#main-header {
+    text-align: center;
+    color: #1a2a3a;
+    font-size: 2.5rem;
+    margin-top: 50px;
+}

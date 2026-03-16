@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Control Flow Practice</title>
+    <style>
+        :root {
+            --v-red: #ff4655;
+            --v-dark: #0f1923;
+            --v-white: #ece8e1;
+            --v-gray: #8b978f;
+        }
+
+        body {
+            background-color: var(--v-dark);
+            color: var(--v-white);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .terminal-box {
+            background: #0b1219;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+        }
+
+        .v-btn {
+            background: var(--v-red);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        #displayArea {
+            font-family: 'Courier New', monospace;
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 4px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-size: 14px;
+        }
+
+        .even { color: #00baff; } /* สีเลขคู่ */
+        .odd { color: #ff4655; }  /* สีเลขคี่ */
+        .header { color: #cdbe91; font-weight: bold; border-bottom: 1px solid #333; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="terminal-box">
+        <button class="v-btn" onclick="startPractice()">Run Practice</button>
+        <div id="displayArea">// Awaiting deployment...</div>
+    </div>
+
+    <script src="JavaScript/javascript.js"></script>
+</body>
+</html>
