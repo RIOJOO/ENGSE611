@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Lab 1: Sign-Up Form Basic (No CSS, Full Border)</title>
+</head>
+<body>
+    
+    <center>
+        <table border="1" cellpadding="15" cellspacing="0" width="450">
+            <tr>
+                <td align="center">
+                    
+                    <h2 align="left">สมัคร</h2>
+                    <p align="left">ง่ายและเร็ว</p>
+                    <form action="#" method="post">
+                        <div class="form-body">
+                            <table border="0" cellpadding="8" cellspacing="0" width="100%">
+                                
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="full_name">ชื่อ - นามสกุล:</label><br>
+                                        <input type="text" id="firstname" name="firstname" placeholder="ชื่อ" required size="20">
+                                        <input type="text" id="lastname" name="lastname" placeholder="นามสกุล" required size="20">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="email">อีเมล:</label><br>
+                                        <input type="email" id="email" name="email" required size="48">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="2">
+                                        <label>รหัสผ่าน:</label><br>
+                                        <input type="password" id="password" name="password" placeholder="รหัสผ่าน" required size="20">
+                                        <input type="password" id="confirm_password" name="confirm_password" placeholder="ยืนยันรหัสผ่าน" required size="20">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="2">
+                                    <label> วัน/เดือน/ปีเกิด</label><br>
+                                    
+                                    <select name="dob_day" required>
+                                            <option value="">1</option>
+                                            <script>
+                                                for (let i = 1; i <= 31; i++) {
+                                                    document.write(`<option value="${i}">${i}</option>`);
+                                                }
+                                            </script>
+                                        </select>
+
+                                        <select name="dob_month" required>
+                                            <option value="9">ก.ย.</option>
+                                            <option value="1">ม.ค.</option>
+                                            <option value="2">ก.พ.</option>
+                                            <option value="3">มี.ค.</option>
+                                            <option value="4">เม.ย.</option>
+                                            <option value="5">พ.ค.</option>
+                                            <option value="6">มิ.ย.</option>
+                                            <option value="7">ก.ค.</option>
+                                            <option value="8">ส.ค.</option>
+                                            <option value="9">ก.ย.</option>
+                                            <option value="10">ต.ค.</option>
+                                            <option value="11">พ.ย.</option>
+                                            <option value="12">ธ.ค.</option>
+                                        </select>
+
+                                        <select name="dob_year" required>
+                                            <option value="2000">2000</option>
+                                            <script>
+                                                const currentYear = new Date().getFullYear();
+                                                for (let i = currentYear; i >= currentYear - 100; i--) {
+                                                    document.write(`<option value="${i}">${i}</option>`);
+                                                }
+                                            </script>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <label>เพศ:</label>
+                                        <input type="radio" id="gender_male" name="gender" value="male" required>
+                                        <label for="gender_male">ชาย</label>
+
+                                        <input type="radio" id="gender_female" name="gender" value="female">
+                                        <label for="gender_female">หญิง</label>
+                                    </td>
+                                </tr>
+
+                                </table>
+                                
+                                <div class="terms-box">
+                                
+                                    เมื่อคลิก 'สมัคร' แสดงว่าคุณยอมรับข้อกำหนด นโยบายข้อมูล และนโยบายคุ้กกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเรา และสามารถเลือกไม่รับได้ในภายหลัง
+                                
+                                </div>
+                            </table>
+                        </div>
+                        
+                        <br>
+                        <div align="center">
+                            <button type="submit" id="submit-btn">สมัคร</button>
+                            <button type="reset" id="reset-btn">ยกเลิก (Reset)</button> 
+                        </div>
+                    
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

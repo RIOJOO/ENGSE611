@@ -1,0 +1,33 @@
+<button onclick="runDemo()">Run Code</button>
+
+<pre id="outputBox" style="background: black; color: white; padding: 10px; min-height: 50px;"></pre>
+
+<script>
+function runDemo() {
+    console.clear();
+    const output = [];
+
+    let studentName = 'สมชาย';
+    let age = 19;             
+    const universityName = 'มหาวิทยาลัยเทคโนโลยี';
+
+    output.push("ชื่อ: " + studentName);
+    output.push("อายุ: " + age);
+    
+    console.log("ชื่อ:", studentName);
+    console.log("อายุ:", age);
+
+    age = 21;
+    output.push("อายุใหม่: " + age);
+    console.log("อายุใหม่:", age);
+
+    try {
+        universityName = 'มหาวิทยาลัยใหม่'; 
+    } catch (e) {
+        output.push("Error: " + e.message);
+        console.error(e.message);
+    }
+
+    document.getElementById("outputBox").textContent = output.join("\n");
+}
+</script>
