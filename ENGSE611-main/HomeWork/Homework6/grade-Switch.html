@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Grade Evaluator - Switch Edition</title>
+    <style>
+:root {
+    --v-red: #ff4655;
+    --v-dark: #0f1923;
+    --v-slate: #1f2326;
+    --v-white: #ece8e1;
+    --v-gray: #8b978f;
+}
+
+* {
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--v-dark);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: var(--v-white);
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 0);
+    background-size: 30px 30px;
+}
+
+.v-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.v-card {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    padding: 60px;
+    background: rgba(15, 25, 35, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+    
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.v-card::before {
+    content: "SYSTEM_ACCESS_01";
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 10px;
+    color: var(--v-red);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.v-title {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    color: var(--v-gray);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.input-container input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    color: white;
+    font-size: 5rem;
+    font-weight: 900;
+    width: 200px;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-container input:focus {
+    border-bottom-color: var(--v-red);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.v-btn {
+    margin-top: 40px;
+    background: transparent;
+    border: 1px solid var(--v-red);
+    color: var(--v-red);
+    padding: 12px 50px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+}
+
+.v-btn:hover {
+    background: var(--v-red);
+    color: white;
+}
+
+.grade-display {
+    font-size: 12rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 30px;
+    animation: gradeIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes gradeIn {
+    from { transform: scale(0.3); opacity: 0; filter: blur(10px); }
+    to { transform: scale(1); opacity: 1; filter: blur(0); }
+}
+
+@media (max-width: 480px) {
+    .v-card {
+        padding: 40px 20px;
+        max-width: 90%;
+    }
+    .grade-display {
+        font-size: 8rem;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="v-screen">
+        
+        <div class="v-card">
+            <div class="v-title">RANK EVALUATION</div>
+            
+            <div class="input-container">
+                <input type="number" id="scoreInput" placeholder="00" min="0" max="100">
+            </div>
+
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <button class="v-btn" onclick="checkGrade()">RUN SYSTEM</button>
+                <button class="v-btn" onclick="randomScore()">RANDOMIZE</button>
+            </div>
+
+            <div id="outputBox">
+                <div style="text-align: center; color: #463d32; margin-top: 30px; font-size: 0.8rem;">
+                    AWAITING DATA INPUT...
+                </div>
+            </div>
+        </div>
+
+    </div> <script src="JavaScript/JavaScript.js"></script>
+</body>
+</html>
